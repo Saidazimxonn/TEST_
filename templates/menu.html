@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load menu_tags %}
+
+{% block menu %}
+
+{{main_menu}}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Меню</title>
+</head>
+<body>
+    <ul>
+        {% for menu_item in menu_items %}
+        <li><a href="{{ menu_item.slug }}">{{ menu_item.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+<h1>Salom dunyo</h1>
+{% endblock %}
